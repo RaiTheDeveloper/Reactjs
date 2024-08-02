@@ -2,6 +2,8 @@ import React from 'react'
 import { useState,useEffect } from 'react'
 import { fetchSingleItem } from '../services/apiservice';
 import { useParams } from 'react-router-dom';
+import { Header } from './header';
+import SearchBar from './searchbar';
 
 
 const Product = () => {
@@ -18,6 +20,9 @@ const Product = () => {
     },[id]);
     if (!product) return <p>Loading...</p>;
     return (
+        <>
+        <Header/>
+        <SearchBar/>
         <div className="p-6 bg-gray-100 min-h-screen">
           <div className="max-w-6xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
             <div className="flex flex-col md:flex-row">
@@ -41,6 +46,7 @@ const Product = () => {
             </div>
           </div>
         </div>
+        </>
       );
 }
 

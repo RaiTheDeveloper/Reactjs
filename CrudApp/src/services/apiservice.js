@@ -8,6 +8,12 @@ export const fetchSingleItem = async(id)=>{
     const response = await api.get(`/products/${id}`)
     return response.data;
 }
+
+export const fetchQueryItems=async(query)=>{
+    const response = await api.get(`/products/search?q=${query}`)
+    return response.data.products;
+}
+
 export const fetchitems = async()=>{
 const response = await api.get('/products');
 return response.data.products;
