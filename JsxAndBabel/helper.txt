@@ -1,2 +1,7 @@
 
 "Jsx and Babel"
+
+vite default uses esbuild for transpiling es6+ js to lower version js for old browser compaitiblity.
+
+to integreate bable we can install throw node. and create a bable config file and add the plugin in vite config .
+
