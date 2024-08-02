@@ -1,0 +1,10 @@
+To create this app we will have these components
+ 
+ header
+ search
+    input
+    button
+ page
+    single product
+ pagination
+ footer
